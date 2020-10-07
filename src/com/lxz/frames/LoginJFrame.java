@@ -1,20 +1,20 @@
 package com.lxz.frames;
 
-import java.awt.BorderLayout;
 import java.awt.Container;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
+/**
+ * @program: CMAPP
+ * @description 登录窗口
+ * @author: 李星泽
+ * @create: 2020-07-17 08:56
+ **/
 public class LoginJFrame extends JFrame {
     
     //单例模式
     private static LoginJFrame instanceFrame = null;
 
     /**
-     * Launch the application.
+     * 程序开始运行
      */
     public static void main(String[] args) {
         LoginJFrame loginJFrame=LoginJFrame.creatInstance();

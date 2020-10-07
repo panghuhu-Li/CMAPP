@@ -7,20 +7,28 @@ import com.lxz.utils.GsonUtils;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * @program: CMAPP
+ * @description 用户数据处理层
+ * @author: 李星泽
+ * @create: 2020-07-16 06:26
+ **/
 public class AdministratorServiceimpl implements AdministratorService {
     private FileUtils fileUtils = new FileUtils();
     private GsonUtils gsonUtils = new GsonUtils();
 
+    /**
+     * @param object:管理员对象
+     * @return boolean:判断是否添加成功
+     * @description 添加管理员注册
+     **/
     @Override
     public boolean add(Object object) throws IOException {
 
         // 判断是否已存在账号相同的管理员
         Administrator admini = (Administrator) object;
-        // 从文件中读取字符串
-        String objString = fileUtils.readFile("User");
         // 得到从字符串转换的对象
-        List<Object> administrators = getAdministrator();
+        List<Object> administrators = getList();
         // 判断是否已经存在该用户
         for (Object obj : administrators) {
             Administrator administrator = (Administrator) obj;
@@ -33,11 +41,15 @@ public class AdministratorServiceimpl implements AdministratorService {
         return true;
     }
 
-    //删除管理员
+    /**
+     * @param accountNumber:管理员登录账号
+     * @return String:返回是否成功删除
+     * @description 根据管理员账户删除
+     **/
     @Override
     public boolean delete(String accountNumber) throws IOException {
 
-        List<Object> administrators = getAdministrator();
+        List<Object> administrators = getList();
         int flag = 0;
         //从后向前避免顺序发生变化
         for (int i = administrators.size() - 1; i >= 0; i--) {
@@ -54,13 +66,17 @@ public class AdministratorServiceimpl implements AdministratorService {
         }
         return true;
     }
-
-    //修改管理员信息
+    /**
+     * @param accountNumber:管理员登录账号
+     * @param name:管理员姓名
+     * @param linkWay:管理员联系方式
+     * @return boolean:返回是否修改成功
+     * @description 根据管理员登录账号修改管理员姓名和联系方式
+     **/
     @Override
     public boolean modify(String accountNumber, String name, String linkWay) throws IOException {
-        String objString = fileUtils.readFile("User");
-        List<Object> objects = getAdministrator();
-        int i = 0, flag = 0;
+        List<Object> objects = getList();
+        int flag = 0;
         //从后往前添加，因为从JSON转化为数组后JSON是从后向前读取
         for (int count = objects.size() - 1; count >= 0; count--) {
             Administrator administrator = (Administrator) objects.get(count);
@@ -84,12 +100,14 @@ public class AdministratorServiceimpl implements AdministratorService {
             return false;
         }
     }
-
+    /**
+     * @param name:管理员姓名
+     * @return Object:返回该管理员对象
+     * @description 根据管理员姓名进行查找
+     **/
     @Override
-    //查找管理员信息
     public Object search(String name) throws IOException {
-        String objString = fileUtils.readFile("User");
-        List<Object> administrators = getAdministrator();
+        List<Object> administrators = getList();
         for (Object obj : administrators) {
             Administrator administrator = (Administrator) obj;
             if (administrator.getName().equals(name)) {
@@ -99,13 +117,16 @@ public class AdministratorServiceimpl implements AdministratorService {
         return null;
     }
 
+    /**
+     * @param accountNumber:管理员登录账号
+     * @param password:管理员登录密码
+     * @return String:返回管理员登录类型
+     * @description 登录人员权限判断
+     **/
     @Override
-    //判断登录人的密码是否正确
     public String whoRegister(String accountNumber, String password) throws IOException {
-        // 从文件中读取字符串
-        String objString = fileUtils.readFile("User");
         // 得到从字符串转换的对象
-        List<Object> administrators = getAdministrator();
+        List<Object> administrators = getList();
         // 判断密码和账号是否正确
         for (Object obj : administrators) {
             Administrator administrator = (Administrator) obj;
@@ -118,14 +139,16 @@ public class AdministratorServiceimpl implements AdministratorService {
 
     }
 
+    /**
+     * @return List<Object>:返回所有管理员信息
+     * @description 获得所有管理员信息
+     **/
     @Override
-    //从文件中获取管理员对象
-    public List<Object> getAdministrator() throws IOException {
+    public List<Object> getList() throws IOException {
         // TODO 自动生成的方法存根
         List<Object> administrators = new ArrayList<Object>();
         String objString = fileUtils.readFile("User");
         administrators = gsonUtils.toObjectList(objString, Administrator.class);
         return administrators;
     }
-
 }

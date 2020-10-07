@@ -6,17 +6,24 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
+/**
+ * @program: CMAPP
+ * @description 经销商窗口
+ * @author: 李星泽
+ * @create: 2020-07-18 15:23
+ **/
 public class AgencyJFrame extends JFrame {
+
+    private static final long serialVersionUID = 1L;
     //单例模式
     private static AgencyJFrame instanceofJFrame = null;
 
     /**
-     * Create the frame.
+     * 创建一个窗口
      */
     private AgencyJFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,10 +39,11 @@ public class AgencyJFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem = new JMenuItem("我的订单");
         mnNewMenu.add(mntmNewMenuItem);
-        
+
         changeContenePane(new AgencyJPanel());
     }
 
+    //单例模式
     public static AgencyJFrame creatInstance() {
         if (instanceofJFrame == null) {
             instanceofJFrame = new AgencyJFrame();
@@ -45,16 +53,26 @@ public class AgencyJFrame extends JFrame {
         }
     }
 
+    /**
+     * @param void
+     * @param contentPane:需要改变的面板
+     */
     public void changeContenePane(Container contentPane) {
         setContentPane(contentPane);
         // 重新启动
         this.revalidate();
     }
 }
+
+/**
+ * 经销商面板
+ */
 class AgencyJPanel extends JPanel {
 
+    private static final long serialVersionUID = 1L;
+
     /**
-     * Create the panel.
+     * 创建经销商面板
      */
     public AgencyJPanel() {
         setLayout(null);
@@ -62,7 +80,5 @@ class AgencyJPanel extends JPanel {
         JLabel lb = new JLabel(imageIcon);
         lb.setBounds(0, 0, 611, 457);
         add(lb);
-
     }
-
 }

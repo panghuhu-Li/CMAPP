@@ -28,6 +28,12 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 
+/**
+ * @program: CMAPP
+ * @description 租用功能实现面板
+ * @author: 李星泽
+ * @create: 2020-07-19 10:03
+ **/
 public class UserManaJPanel extends JPanel {
     private String factoryType;
     private DefaultTableModel defaultTableModel = new DefaultTableModel();
@@ -85,13 +91,23 @@ public class UserManaJPanel extends JPanel {
         passwordField.setBounds(174, 86, 165, 24);
         add(passwordField);
 
-        JComboBox comboBox = new JComboBox();
-        comboBox.setModel(new DefaultComboBoxModel(new String[]{"云工厂", "经销商"}));
+        JComboBox<String> comboBox = new JComboBox<String>();
+        comboBox.addItem("云工厂");
+        comboBox.addItem("经销商");
         comboBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO 自动生成的方法存根
                 factoryType = comboBox.getSelectedItem().toString();
+                if (factoryType==null||factoryType.equals("经销商")||factoryType.equals("")) {
+                    factoryDesc.setEditable(false);
+                    factoryDesc.setBackground(Color.LIGHT_GRAY);
+                    factoryName.setEditable(false);
+                    factoryName.setBackground(Color.LIGHT_GRAY);
+                }else if(factoryType.equals("云工厂")) {
+                    factoryDesc.setEditable(true);
+                    factoryName.setEditable(true);
+                }
             }
         });
         comboBox.setBounds(174, 150, 86, 24);
@@ -321,13 +337,16 @@ public class UserManaJPanel extends JPanel {
                 // 获取检索后的管理员对象
                 Administrator administrator = null;
                 try {
-
-                    administrator = (Administrator) adminidtratorcontrollers.searchAdministrator(name.getText());
+                    //姓名框输入不能为空
+                    if (name.getText().equals("") || name.getText() == null) {
+                        JOptionPane.showMessageDialog(null, "查找的姓名不能为空");
+                    } else {
+                        administrator = (Administrator) adminidtratorcontrollers.searchAdministrator(name.getText());
+                    }
                 } catch (IOException e) {
                     // TODO 自动生成的 catch 块
                     e.printStackTrace();
                 }
-                ;
                 if (administrator == null) {
                     JOptionPane.showMessageDialog(null, "不存在该管理员");
                     return;
@@ -354,8 +373,8 @@ public class UserManaJPanel extends JPanel {
                         return;
                     }
                     String account = defaultTableModel.getValueAt(num, 0).toString();
-                    String changeName = "";
-                    String changeLinkWayString = "";
+                    String changeName;
+                    String changeLinkWayString;
                     if (name.getText() == null || name.getText().equals("")) {
                         changeName = defaultTableModel.getValueAt(num, 1).toString();
                     } else {
@@ -369,6 +388,7 @@ public class UserManaJPanel extends JPanel {
 
                     boolean success = false;
                     try {
+                        //通过账户添加改变的姓名和联系方式
                         success = adminidtratorcontrollers.modifyAdministrator(account, changeName,
                                 changeLinkWayString);
                         if (success) {
@@ -428,6 +448,5 @@ public class UserManaJPanel extends JPanel {
         rowData.add(administrator.getRegisterType());
         // 添加一行
         defaultTableModel.addRow(rowData); // 添加一行
-
     }
 }

@@ -1,11 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74e093a5-feb5-421f-a1b4-dfbaf325f7cf" name="Default Changelist" comment="" />
+    <list default="true" id="74e093a5-feb5-421f-a1b4-dfbaf325f7cf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/CloudFactory" beforeDir="false" afterPath="$PROJECT_DIR$/Data/CloudFactory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/EquipmentInfo" beforeDir="false" afterPath="$PROJECT_DIR$/Data/EquipmentInfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/ProductInfo" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ProductInfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/User" beforeDir="false" afterPath="$PROJECT_DIR$/Data/User" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/Factory/MyServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/Factory/MyServiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/controllers/Adminidtratorcontrollers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/controllers/Adminidtratorcontrollers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/controllers/CloudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/controllers/CloudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/controllers/EquipmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/controllers/EquipmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/Agency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/Agency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/CloudAdministrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/CloudAdministrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/CloudFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/CloudFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/EquipmentInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/EquipmentInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/EquipmentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/EquipmentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/OrderManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/OrderManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/ProductInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/ProductInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/ProductType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/SuperAdministrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/SuperAdministrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/AgencyJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/AgencyJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/CapacityJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/CapacityJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/EquipmentJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/EquipmentJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/EquipmentTypeJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/EquipmentTypeJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/FactoryAdminiJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/FactoryAdminiJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/FactoryJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/FactoryJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/LoginJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/LoginJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/LoginJPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/LoginJPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/MyEquipmentJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/MyEquipmentJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/ProductInfoJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/ProductInfoJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/ProductTypeJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/ProductTypeJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/RegisterJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/RegisterJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/RentJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/RentJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/SuperJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/SuperJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/UserManaJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/UserManaJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/services/AdministratorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/services/AdministratorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/services/CloudInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/services/CloudInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/services/EquipmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/services/EquipmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/servicesimpl/AdministratorServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/servicesimpl/AdministratorServiceimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/servicesimpl/CloudInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/servicesimpl/CloudInterfaceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/servicesimpl/EquipmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/servicesimpl/EquipmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/servicesimpl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/servicesimpl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/utils/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/utils/GsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/utils/GsonUtils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -14,6 +75,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1eiW6OiacWN3iSRw5caup9tK8fJ" />
   <component name="ProjectViewState">
@@ -25,11 +89,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.project" />
+    <property name="last_opened_file_path" value="D:/桌面/CMAPP/.project" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
     <configuration name="LoginJFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -91,6 +155,17 @@
       <workItem from="1595163859153" duration="1523000" />
       <workItem from="1595200155215" duration="2000" />
       <workItem from="1595210972421" duration="2545000" />
+      <workItem from="1595235253254" duration="2058000" />
+      <workItem from="1595237329622" duration="2243000" />
+      <workItem from="1595287168701" duration="2595000" />
+      <workItem from="1595290687577" duration="1591000" />
+      <workItem from="1595292319049" duration="10701000" />
+      <workItem from="1595381390844" duration="28000" />
+      <workItem from="1595418553048" duration="231000" />
+      <workItem from="1595419059895" duration="137000" />
+      <workItem from="1595458447688" duration="6114000" />
+      <workItem from="1595467716238" duration="84000" />
+      <workItem from="1595637243575" duration="110000" />
     </task>
     <servers />
   </component>
@@ -98,65 +173,73 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#Notifications" timestamp="1594804848875">
+    <state x="361" y="71" key="#Notifications" timestamp="1595237336573">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1594804848875" />
+    <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1595237336573" />
     <state x="520" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594976772776">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1594976772776" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1595164305701">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1595239257803">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1595164305701" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1595239257803" />
     <state x="614" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1594804731110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="614" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1594804731110" />
-    <state width="1537" height="255" key="GridCell.Tab.0.bottom" timestamp="1595213519831">
+    <state x="528" y="113" key="FileChooserDialogImpl" timestamp="1595637318481">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="255" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595213519831" />
-    <state width="1537" height="255" key="GridCell.Tab.0.center" timestamp="1595213519831">
+    <state x="528" y="113" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595637318481" />
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1595467799915">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="255" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595213519831" />
-    <state width="1537" height="255" key="GridCell.Tab.0.left" timestamp="1595213519831">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595467799915" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1595467799915">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="255" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595213519831" />
-    <state width="1537" height="255" key="GridCell.Tab.0.right" timestamp="1595213519831">
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595467799915" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1595467799915">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="255" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595213519831" />
-    <state width="1537" height="255" key="GridCell.Tab.1.bottom" timestamp="1595213519831">
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595467799915" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1595467799915">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="255" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595213519831" />
-    <state width="1537" height="255" key="GridCell.Tab.1.center" timestamp="1595213519831">
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595467799915" />
+    <state width="1493" height="135" key="GridCell.Tab.1.bottom" timestamp="1595289777898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="255" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595213519831" />
-    <state width="1537" height="255" key="GridCell.Tab.1.left" timestamp="1595213519831">
+    <state width="1493" height="135" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595289777898" />
+    <state width="1493" height="135" key="GridCell.Tab.1.center" timestamp="1595289777898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="255" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595213519831" />
-    <state width="1537" height="255" key="GridCell.Tab.1.right" timestamp="1595213519831">
+    <state width="1493" height="135" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595289777898" />
+    <state width="1493" height="135" key="GridCell.Tab.1.left" timestamp="1595289777898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="255" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595213519831" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1594877458724">
+    <state width="1493" height="135" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595289777898" />
+    <state width="1493" height="135" key="GridCell.Tab.1.right" timestamp="1595289777898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594877458724" />
+    <state width="1493" height="135" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595289777898" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1595237359158">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595237359158" />
+    <state x="178" y="22" key="new project wizard" timestamp="1595637352686">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="178" y="22" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1595637352686" />
     <state x="422" y="204" width="713" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1594877445277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="422" y="204" width="713" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824@0.0.1536.824" timestamp="1594877445277" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1595123689830">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1595300780513">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595123689830" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595300780513" />
   </component>
 </project>

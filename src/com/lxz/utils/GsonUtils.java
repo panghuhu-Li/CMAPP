@@ -11,8 +11,8 @@ import com.google.gson.JsonParser;
 
 /**
  * @program: CMAPP
- * @description
- * @author: YourName
+ * @description Json操作 将字符串转换为对象或者将对象转换为字符串
+ * @author: 李星泽
  * @create: 2020-07-16 12:02
  **/
 public class GsonUtils {
@@ -22,7 +22,7 @@ public class GsonUtils {
         Gson gson = gsonBuilder.create();
         return gson.toJson(object);
     }
-    
+
     //返回一个对象集合
     public List<Object> toObjectList(String js, Class<?> c) {
         JsonParser parser = new JsonParser();
@@ -36,19 +36,4 @@ public class GsonUtils {
         }
         return objects;
     }
-    
-    //将字符串转换为对象
-    public static Object toObj(String js, Class<?> c) {
-        JsonParser parser = new JsonParser();
-        //得到一个装有属性的Json数组
-        JsonArray jsonArray = parser.parse(js).getAsJsonArray();
-        Gson gson = new Gson();
-        Object obj = null;
-        //将属性放在obj中
-        for (JsonElement jsonElement : jsonArray) {
-            obj = gson.fromJson(jsonElement, c);
-        }
-        return obj;
-    }
-
 }

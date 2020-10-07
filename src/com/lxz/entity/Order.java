@@ -7,13 +7,6 @@ package com.lxz.entity;
  * @create: 2020-07-15 17:21
  **/
 public class Order {
-//-orderNumber: int
-//-orderNumber: int
-//-orderAmount: int
-//-dayOfDelivery: String
-//-dayOfDecline: String
-//-consignee: String
-//-contactWay: String
 
     private int orderNumber;//订单编号
     private String productName;//产品名称

@@ -5,11 +5,18 @@ import javax.swing.table.DefaultTableModel;
 
 import com.lxz.controllers.EquipmentController;
 import com.lxz.entity.EquipmentInfo;
+
 import java.awt.Font;
 import java.io.IOException;
 import java.util.List;
 import java.util.Vector;
 
+/**
+ * @program: CMAPP
+ * @description 租用功能实现面板
+ * @author: 李星泽
+ * @create: 2020-07-18 09:46
+ **/
 public class RentJPanel extends JPanel {
 
     private static final long serialVersionUID = 1L;
@@ -18,7 +25,7 @@ public class RentJPanel extends JPanel {
     private EquipmentController equipmentController = new EquipmentController();
 
     /**
-     * Create the panel.
+     * 创建租用功能实现面板
      */
     public RentJPanel(String aff) {
         setLayout(null);
@@ -32,6 +39,7 @@ public class RentJPanel extends JPanel {
                     JOptionPane.showMessageDialog(null, "请选择你租用的设备");
                     return;
                 }
+                //只能租用未租用并且属于超级管理员的设备
                 if (defaultTableModel.getValueAt(num, 7).toString().equals("未租用")
                         && defaultTableModel.getValueAt(num, 8).toString().equals("超级管理员")) {
 
@@ -87,17 +95,18 @@ public class RentJPanel extends JPanel {
 
     // 展示管理员信息
     public void showMessage() throws IOException {
-        int num=0;
+        int num = 0;
         // 判断展示什么信息
         List<Object> objects = equipmentController.getEquipmentInfo();
         for (int i = 0; i < objects.size(); i++) {
             EquipmentInfo equipmentInfo = (EquipmentInfo) objects.get(i);
+            //只展示属于超级管理员并且未租用的设备
             if (equipmentInfo.getAffiliation().equals("超级管理员")
                     && equipmentInfo.isRented().equals("未租用")) {
                 num++;
                 addTableRow((EquipmentInfo) objects.get(i), num);
             }
-            
+
         }
     }
 
@@ -125,6 +134,5 @@ public class RentJPanel extends JPanel {
         rowData.add(equipmentInfo.getAffiliation());
         // 添加一行
         defaultTableModel.addRow(rowData); // 添加一行
-
     }
 }

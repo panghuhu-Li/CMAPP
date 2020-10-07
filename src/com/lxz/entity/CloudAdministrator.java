@@ -2,8 +2,8 @@ package com.lxz.entity;
 
 /**
  * @program: CMAPP
- * @description
- * @author: YourName
+ * @description 云工厂管理员实体类  继承管理员
+ * @author: 李星泽
  * @create: 2020-07-16 06:20
  **/
 public class CloudAdministrator extends Administrator {

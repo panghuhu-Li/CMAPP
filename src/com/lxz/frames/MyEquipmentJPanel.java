@@ -2,12 +2,11 @@ package com.lxz.frames;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-
 import com.lxz.controllers.CloudController;
 import com.lxz.controllers.EquipmentController;
 import com.lxz.entity.CloudFactory;
 import com.lxz.entity.EquipmentInfo;
-
+import com.lxz.entity.EquipmentType;
 import java.io.IOException;
 import java.util.List;
 import java.util.Vector;
@@ -15,6 +14,12 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * @program: CMAPP
+ * @description 云工厂管路员设备管理面板
+ * @author: 李星泽
+ * @create: 2020-07-17 10:50
+ **/
 public class MyEquipmentJPanel extends JPanel {
 
     private static final long serialVersionUID = 1L;
@@ -32,7 +37,7 @@ public class MyEquipmentJPanel extends JPanel {
     private String aff = "";
 
     /**
-     * Create the panel.
+     * 创建云工厂管路员设备管理面板
      */
     public MyEquipmentJPanel(String realName) {
         setLayout(null);
@@ -115,6 +120,7 @@ public class MyEquipmentJPanel extends JPanel {
                 return;
             }
 
+            //创建设备信息对象
             EquipmentInfo equipmentInfo = new EquipmentInfo();
             equipmentInfo.setAffiliation(affilia.getText());
             equipmentInfo.setEquipmentDesc(equipmenttDesc.getText());
@@ -126,10 +132,13 @@ public class MyEquipmentJPanel extends JPanel {
             equipmentInfo.setRented(lendStatus);
 
             try {
+                //设备信息添加
                 boolean success = equipmentController.add(equipmentInfo);
                 if (success) {
                     JOptionPane.showMessageDialog(null, "添加成功");
+                    //清空表格中的信息
                     defaultTableModel.setRowCount(0);
+                    //展示最新信息
                     showMessage(realName);
                 } else {
                     JOptionPane.showMessageDialog(null, "添加失败，可能已存在该设备");
@@ -155,7 +164,7 @@ public class MyEquipmentJPanel extends JPanel {
                     JOptionPane.showMessageDialog(null, "请选择你要修改的行");
                     return;
                 }
-
+                //获得要修改的信息
                 String names, type, spec, desc, eqstatus, ldstatus, aff;
                 if (equipmentName.getText() == null || equipmentName.getText().equals("")) {
                     names = defaultTableModel.getValueAt(num, 2).toString();
@@ -194,8 +203,10 @@ public class MyEquipmentJPanel extends JPanel {
                 }
 
                 try {
+                    //进行信息的修改
                     boolean success = equipmentController.modify(defaultTableModel.getValueAt(num, 1).toString(), names,
                             type, spec, desc, eqstatus, ldstatus, aff);
+                    //判断信息是否修改成功
                     if (success) {
                         JOptionPane.showMessageDialog(null, "修改成功");
                         defaultTableModel.setRowCount(0);
@@ -223,15 +234,14 @@ public class MyEquipmentJPanel extends JPanel {
                     return;
                 }
                 //删除租用设备并将该设备还回超级管理员
-                if(defaultTableModel.getValueAt(num, 7).toString().equals("已租用")){
-
+                if (defaultTableModel.getValueAt(num, 7).toString().equals("已租用")) {
+                    //还给管理员指只修改设备租用信息和所属信息  其余信息不变
                     String names, type, spec, desc, eqstatus;
                     names = defaultTableModel.getValueAt(num, 2).toString();
                     type = defaultTableModel.getValueAt(num, 3).toString();
                     spec = defaultTableModel.getValueAt(num, 4).toString();
                     desc = defaultTableModel.getValueAt(num, 5).toString();
                     eqstatus = defaultTableModel.getValueAt(num, 6).toString();
-
                     try {
                         boolean success = equipmentController.modify(defaultTableModel.getValueAt(num, 1).toString(), names,
                                 type, spec, desc, eqstatus, "未租用", "超级管理员");
@@ -245,8 +255,9 @@ public class MyEquipmentJPanel extends JPanel {
                         ex.printStackTrace();
                     }
                 }
+
                 try {
-                    // 只能删除工厂自有设备
+                    // 删除工厂自有设备
                     if (defaultTableModel.getValueAt(num, 7).toString().equals("工厂设备")) {
                         boolean success = equipmentController.delete(defaultTableModel.getValueAt(num, 1).toString());
                         // 判断书否删除成功
@@ -347,11 +358,26 @@ public class MyEquipmentJPanel extends JPanel {
         defaultTableModel.addColumn("租用状态");
         defaultTableModel.addColumn("所属工厂");
 
+        //动态添加设备类型
+        List<Object> objects = null;
+        try {
+            objects = equipmentController.getEquipmentType();
+        } catch (IOException e1) {
+            // TODO 自动生成的 catch 块
+            e1.printStackTrace();
+        }
+
+
         JComboBox<String> comboBox = new JComboBox<String>();
-        comboBox.addItem("飞行器自动制造设备");
-        comboBox.addItem("美颜水封装设备");
-        comboBox.addItem("快递运输设备");
-        comboBox.addItem("蟠桃真空包装设备");
+        //判断是否含有设备类型信息
+        if (objects == null || objects.size() == 0) {
+            comboBox.addItem("无任何设备类型");
+        } else {
+            for (int i = 0; i < objects.size(); i++) {
+                EquipmentType equipmentType = (EquipmentType) objects.get(i);
+                comboBox.addItem(equipmentType.getTypeName());
+            }
+        }
         comboBox.addActionListener(e -> choose = comboBox.getSelectedItem().toString());
         comboBox.setBounds(596, 9, 212, 27);
         add(comboBox);
@@ -418,7 +444,7 @@ public class MyEquipmentJPanel extends JPanel {
                 }
 
                 // 弹出新面板,并将设备编号和设备名称传进新面板中
-                changeJFrame(realName, "产品配置界面", new CapacityJPanel(numberString,nameString));
+                changeJFrame(realName, "产品配置界面", new CapacityJPanel(numberString, nameString));
 
             }
         });
@@ -493,6 +519,5 @@ public class MyEquipmentJPanel extends JPanel {
         rowData.add(equipmentInfo.getAffiliation());
         // 添加一行
         defaultTableModel.addRow(rowData); // 添加一行
-
     }
 }

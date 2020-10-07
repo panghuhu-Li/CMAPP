@@ -2,8 +2,8 @@ package com.lxz.entity;
 
 /**
  * @program: CMAPP
- * @description
- * @author: YourName
+ * @description 产品信息实体类
+ * @author: 李星泽
  * @create: 2020-07-15 18:05
  **/
 public class ProductInfo {

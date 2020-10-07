@@ -2,21 +2,24 @@ package com.lxz.frames;
 
 import javax.swing.*;
 import java.awt.Font;
-
 import com.lxz.controllers.Adminidtratorcontrollers;
-import com.lxz.entity.Agency;
-
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
+/**
+ * @program: CMAPP
+ * @description 登录功能实现面板
+ * @author: 李星泽
+ * @create: 2020-07-17 09:20
+ **/
 public class LoginJPane extends JPanel {
     private JTextField textField;
     private JPasswordField passwordField;
 
     /**
-     * Create the panel.
+     * 创建登录功能实现面板
      */
     public LoginJPane() {
         setLayout(null);
@@ -34,16 +37,13 @@ public class LoginJPane extends JPanel {
         add(lblNewLabel_1);
 
         JButton btnNewButton = new JButton("注册");
-        btnNewButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                LoginJFrame loginJFrame = LoginJFrame.creatInstance();
-                loginJFrame.setVisible(true);
-                loginJFrame.setBounds(100, 100, 990, 535);
-                ;
-                loginJFrame.changeContenePane(new RegisterJPanel());
-                loginJFrame.setLocationRelativeTo(null);
-                loginJFrame.setResizable(false);
-            }
+        btnNewButton.addActionListener(arg0 -> {
+            LoginJFrame loginJFrame = LoginJFrame.creatInstance();
+            loginJFrame.setVisible(true);
+            loginJFrame.setBounds(100, 100, 990, 535);
+            loginJFrame.changeContenePane(new RegisterJPanel());
+            loginJFrame.setLocationRelativeTo(null);
+            loginJFrame.setResizable(false);
         });
         btnNewButton.setFont(new Font("微软雅黑", Font.BOLD, 20));
         btnNewButton.setBounds(79, 341, 106, 33);
@@ -53,11 +53,13 @@ public class LoginJPane extends JPanel {
         btnNewButton_1.setFont(new Font("微软雅黑", Font.BOLD, 20));
         btnNewButton_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
+                //获取账号和密码
                 String accountNumber = textField.getText();
                 String password = new String(passwordField.getPassword());
                 Adminidtratorcontrollers adminidtratorcontrollers = new Adminidtratorcontrollers();
                 String isType = "";
                 try {
+                    //获得登录类型
                     isType = adminidtratorcontrollers.whoRegister(accountNumber, password);
                 } catch (IOException e) {
                     // TODO 自动生成的 catch 块
@@ -74,7 +76,7 @@ public class LoginJPane extends JPanel {
                     return;
                 }
                 //若账号密码正确判断该管理员是什么类型
-                String[] limits=isType.split("_");
+                String[] limits = isType.split("_");
                 if (limits[0].equals("success" + "超级管理员")) {
                     SuperJFrame superJFrame = SuperJFrame.creatInstance();
                     changeJFrame(superJFrame);
@@ -84,6 +86,7 @@ public class LoginJPane extends JPanel {
                     changeJFrame(agencyJFrame);
                 }
                 if (limits[0].equals("success" + "云工厂")) {
+                    //当工厂管理员登录时传进管理员的姓名和工厂的负责人相对应
                     FactoryAdminiJFrame factoryAdminiJFrame = FactoryAdminiJFrame.creatInstance(limits[1]);
                     changeJFrame(factoryAdminiJFrame);
                 }
@@ -122,7 +125,12 @@ public class LoginJPane extends JPanel {
     }
 
     //单例模式改变窗口
-    public void changeJFrame(JFrame jFrame){
+
+    /**
+     * @param jFrame:改变的窗口
+     * @description 单例模式改变窗口
+     */
+    public void changeJFrame(JFrame jFrame) {
         jFrame.setVisible(true);
         jFrame.setBounds(100, 100, 611, 457);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -130,7 +138,7 @@ public class LoginJPane extends JPanel {
         jFrame.setResizable(false);
     }
 
-    public void clearText(){
+    public void clearText() {
         textField.setText("");
         passwordField.setText("");
         textField.requestFocus();

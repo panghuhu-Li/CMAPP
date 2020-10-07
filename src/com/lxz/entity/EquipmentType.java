@@ -2,13 +2,11 @@ package com.lxz.entity;
 
 /**
  * @program: CMAPP
- * @description
- * @author: YourName
+ * @description 设备类型实体类
+ * @author: 李星泽
  * @create: 2020-07-15 17:59
  **/
 public class EquipmentType {
-//-number: int
-//-typeName: String
     private static int number;//序号
     private String typeName;//类别名称
 

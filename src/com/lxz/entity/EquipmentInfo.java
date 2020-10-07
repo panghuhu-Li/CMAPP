@@ -5,8 +5,8 @@ import java.util.Map;
 
 /**
  * @program: CMAPP
- * @description
- * @author: YourName
+ * @description 设备信息实体类
+ * @author: 李星泽
  * @create: 2020-07-15 17:51
  **/
 public class EquipmentInfo {
@@ -97,7 +97,7 @@ public class EquipmentInfo {
     public void delete(String equipmentName) {
         capacity.remove(equipmentName);
     }
-    
+
     public String getEquipmentDesc() {
         return equipmentDesc;
     }
@@ -105,16 +105,16 @@ public class EquipmentInfo {
     public void setEquipmentDesc(String equipmentDesc) {
         this.equipmentDesc = equipmentDesc;
     }
-    
-    public void addMap(String productName,Integer count) {
+
+    public void addMap(String productName, Integer count) {
         capacity.put(productName, count);
     }
-    
+
     public void deleteMap(String productName) {
         capacity.remove(productName);
     }
-    
-    public Map<String, Integer> getMap(){
+
+    public Map<String, Integer> getMap() {
         return capacity;
     }
 

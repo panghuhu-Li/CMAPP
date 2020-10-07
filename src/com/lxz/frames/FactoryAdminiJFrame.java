@@ -11,13 +11,20 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JSeparator;
 
+/**
+ * @program: CMAPP
+ * @description 工厂功能选择窗口
+ * @author: 李星泽
+ * @create: 2020-07-16 20:13
+ **/
 public class FactoryAdminiJFrame extends JFrame {
-   
+
     private static final long serialVersionUID = 1L;
     private static FactoryAdminiJFrame instanceofJFrame = null;
 
     /**
-     * Create the frame.
+     * 创建工厂功能窗口
+     * @param name:工厂负责人姓名
      */
     private FactoryAdminiJFrame(String name) {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -55,7 +62,7 @@ public class FactoryAdminiJFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem_2 = new JMenuItem("订单排产");
         mnNewMenu_1.add(mntmNewMenuItem_2);
-        
+
         changeContenePane(new FactoryAdminiJPanel());
 
     }
@@ -79,7 +86,7 @@ public class FactoryAdminiJFrame extends JFrame {
 class FactoryAdminiJPanel extends JPanel {
 
     /**
-     * Create the panel.
+     * 工厂面板
      */
     public FactoryAdminiJPanel() {
         setLayout(null);
@@ -87,7 +94,5 @@ class FactoryAdminiJPanel extends JPanel {
         JLabel lb = new JLabel(imageIcon);
         lb.setBounds(0, 0, 611, 457);
         add(lb);
-
     }
-
 }

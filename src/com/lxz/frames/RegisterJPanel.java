@@ -3,15 +3,22 @@ package com.lxz.frames;
 import com.lxz.controllers.Adminidtratorcontrollers;
 import com.lxz.controllers.CloudController;
 import com.lxz.entity.*;
-
 import javax.swing.*;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.Color;
 import java.io.IOException;
 
-public class RegisterJPanel extends JPanel {
+/**
+ * @program: CMAPP
+ * @description 注册面板
+ * @author: 李星泽
+ * @create: 2020-07-17 21:43
+ **/
+public class RegisterJPanel extends JPanel{
     private JTextField factoryName;
     private JTextField factoryDesc;
     private JTextField name;
@@ -19,9 +26,12 @@ public class RegisterJPanel extends JPanel {
     private JTextField accountNumber;
     private JPasswordField passwordField;
     private String factoryType;
+    
+    JRadioButton rdbtn1 = null;
+    JRadioButton rdbtn2 = null; 
 
     /**
-     * Create the panel.
+     * 创建注册面板
      */
     public RegisterJPanel() {
         setLayout(null);
@@ -242,8 +252,16 @@ public class RegisterJPanel extends JPanel {
         comboBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO 自动生成的方法存根
                 factoryType = comboBox.getSelectedItem().toString();
+                if (factoryType==null||factoryType.equals("经销商")||factoryType.equals("")) {
+                    factoryDesc.setEditable(false);
+                    factoryDesc.setBackground(Color.LIGHT_GRAY);
+                    factoryName.setEditable(false);
+                    factoryName.setBackground(Color.LIGHT_GRAY);
+                }else if(factoryType.equals("云工厂")) {
+                    factoryDesc.setEditable(true);
+                    factoryName.setEditable(true);
+                }
             }
         });
         comboBox.setBounds(148, 296, 205, 24);
@@ -280,4 +298,5 @@ public class RegisterJPanel extends JPanel {
         add(lb);
 
     }
+
 }

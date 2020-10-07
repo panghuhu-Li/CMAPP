@@ -1,5 +1,10 @@
 package com.lxz.entity;
-
+/**
+ * @program: CMAPP
+ * @description 云工厂实体类
+ * @author: 李星泽
+ * @create: 2020-07-16 06:23
+ **/
 public class CloudFactory {
     private String factoryNameString;//工厂名称
     private String factoryDescString;//工厂简介
