@@ -95,10 +95,11 @@ public class SuperJFrame extends JFrame {
         JSeparator separator_3 = new JSeparator();
         menu4.add(separator_3);
 
-        JMenuItem mntmNewMenuItem_5 = new JMenuItem("设备管理");
+        JMenuItem mntmNewMenuItem_5 = new JMenuItem("数据字典管理");
         mntmNewMenuItem_5.addActionListener(e -> {
 
-            changeJFrame("设备管理", new EquipmentJPanel());
+            changeJFrame("数据字典界面", new DataDictionaryJPanel());
+//            changeJFrame("数据字典界面", new EquipmentJPanel());
 
         });
         menu4.add(mntmNewMenuItem_5);

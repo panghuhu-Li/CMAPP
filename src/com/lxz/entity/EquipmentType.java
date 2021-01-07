@@ -7,8 +7,8 @@ package com.lxz.entity;
  * @create: 2020-07-15 17:59
  **/
 public class EquipmentType {
-    private static int number;//序号
-    private String typeName;//类别名称
+    private static int number;// 序号
+    private String typeName;// 类别名称
 
     public EquipmentType() {
         number++;
@@ -32,8 +32,7 @@ public class EquipmentType {
 
     @Override
     public String toString() {
-        return "EquipmentType{" +
-                "typeName='" + typeName + '\'' +
-                '}';
+        return "EquipmentType{" + "typeName='" + typeName + '\'' + '}';
     }
+
 }

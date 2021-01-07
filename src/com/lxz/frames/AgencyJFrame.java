@@ -19,7 +19,7 @@ import javax.swing.JMenuItem;
 public class AgencyJFrame extends JFrame {
 
     private static final long serialVersionUID = 1L;
-    //单例模式
+    // 单例模式
     private static AgencyJFrame instanceofJFrame = null;
 
     /**
@@ -38,12 +38,39 @@ public class AgencyJFrame extends JFrame {
         menuBar.add(mnNewMenu);
 
         JMenuItem mntmNewMenuItem = new JMenuItem("我的订单");
+        mntmNewMenuItem.addActionListener(e -> {
+            
+            AgencyJFrame agencyJFrame=AgencyJFrame.creatInstance();
+            agencyJFrame.changeJFrame("订单发布", new OrderJPanel());
+            
+        });
         mnNewMenu.add(mntmNewMenuItem);
 
         changeContenePane(new AgencyJPanel());
     }
 
-    //单例模式
+    // 改变面板
+    public void changeJFrame(String titleString, JPanel jpanle) {
+        AgencyJFrame agencyJFrame=AgencyJFrame.creatInstance();
+        agencyJFrame.setVisible(true);
+        setTitle(titleString);
+        agencyJFrame.setBounds(100, 100, 850, 620);
+        agencyJFrame.changeContenePane(jpanle);
+        agencyJFrame.setLocationRelativeTo(null);
+        agencyJFrame.setResizable(false);
+    }
+
+    /**
+     * @param contentPane:需要改变的面板
+     */
+
+    public void changeContenePane(Container contentPane) {
+        setContentPane(contentPane);
+        // 重新启动
+        this.revalidate();
+    }
+
+    // 单例模式
     public static AgencyJFrame creatInstance() {
         if (instanceofJFrame == null) {
             instanceofJFrame = new AgencyJFrame();
@@ -53,15 +80,6 @@ public class AgencyJFrame extends JFrame {
         }
     }
 
-    /**
-     * @param void
-     * @param contentPane:需要改变的面板
-     */
-    public void changeContenePane(Container contentPane) {
-        setContentPane(contentPane);
-        // 重新启动
-        this.revalidate();
-    }
 }
 
 /**

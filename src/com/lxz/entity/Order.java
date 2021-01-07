@@ -8,7 +8,7 @@ package com.lxz.entity;
  **/
 public class Order {
 
-    private int orderNumber;//订单编号
+    private String orderNumber;//订单编号
     private String productName;//产品名称
     private String orderAmount;//订购数量
     private String dayOfDeliver;//交付日期
@@ -17,10 +17,18 @@ public class Order {
     private String contactWay;//收货人联系方式
     private String placeOfReceive;//收货地点
 
-    public Order() {
+    public Order(String orderNumber, String productName, String orderAmount, String dayOfDeliver, String dayOfDecline, String consignee, String contactWay, String placeOfReceive) {
+        this.orderNumber = orderNumber;
+        this.productName = productName;
+        this.orderAmount = orderAmount;
+        this.dayOfDeliver = dayOfDeliver;
+        this.dayOfDecline = dayOfDecline;
+        this.consignee = consignee;
+        this.contactWay = contactWay;
+        this.placeOfReceive = placeOfReceive;
     }
 
-    public int getOrderNumber() {
+    public String getOrderNumber() {
         return orderNumber;
     }
 
@@ -52,7 +60,7 @@ public class Order {
         return placeOfReceive;
     }
 
-    public void setOrderNumber(int orderNumber) {
+    public void setOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
     }
 

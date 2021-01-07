@@ -27,6 +27,7 @@ public class FileUtils {
         bufferedWriter.write(userJson);
         bufferedWriter.newLine();
         bufferedWriter.close();
+        System.out.println();
     }
 
     /**

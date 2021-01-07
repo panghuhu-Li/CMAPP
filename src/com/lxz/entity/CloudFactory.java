@@ -1,4 +1,5 @@
 package com.lxz.entity;
+
 /**
  * @program: CMAPP
  * @description 云工厂实体类
@@ -6,13 +7,13 @@ package com.lxz.entity;
  * @create: 2020-07-16 06:23
  **/
 public class CloudFactory {
-    private String factoryNameString;//工厂名称
-    private String factoryDescString;//工厂简介
-    private String principal;//负责人
-    private String linkman;//联系人
-    private String linkway;//联系方式
-    private String accountNumber;//工厂负责人的登录账号
-    private boolean status;//״工厂状态
+    private String factoryNameString;// 工厂名称
+    private String factoryDescString;// 工厂简介
+    private String principal;// 负责人
+    private String linkman;// 联系人
+    private String linkway;// 联系方式
+    private String accountNumber;// 工厂负责人的登录账号
+    private boolean status;// ״工厂状态
 
     public String getAccountNumber() {
         return accountNumber;

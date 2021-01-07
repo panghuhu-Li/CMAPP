@@ -1,10 +1,8 @@
 package com.lxz.Factory;
 
 import com.lxz.services.BaseServices;
-import com.lxz.servicesimpl.AdministratorServiceimpl;
-import com.lxz.servicesimpl.CloudInterfaceImpl;
-import com.lxz.servicesimpl.EquipmentServiceImpl;
-import com.lxz.servicesimpl.ProductServiceImpl;
+import com.lxz.services.DictionaryDataService;
+import com.lxz.servicesimpl.*;
 
 /**
  * @program: CMAPP
@@ -37,6 +35,15 @@ public class MyServiceFactory {
         //产品信息
         if ("Product".equals(message))
             baseService = new ProductServiceImpl();
+
+        //数据字典
+        if ("DictionaryData".equals(message)) {
+            baseService = new DictionaryDataServiceImpl();
+        }
+
+        if ("Order".equals(message)) {
+            baseService = new OrderServiceImpl();
+        }
 
         return baseService;
     }

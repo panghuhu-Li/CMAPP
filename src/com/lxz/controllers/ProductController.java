@@ -2,6 +2,7 @@ package com.lxz.controllers;
 
 import com.lxz.Factory.MyServiceFactory;
 import com.lxz.services.ProductService;
+import com.lxz.servicesimpl.ProductServiceImpl;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.List;
 public class ProductController {
 
     // 用工厂模式减少直接new对象
-    private ProductService productService = (ProductService) MyServiceFactory.createService("Product");
+    private ProductService productService = (ProductServiceImpl) MyServiceFactory.createService("Product");
 
     /**
      * @param object: 添加的产品对象

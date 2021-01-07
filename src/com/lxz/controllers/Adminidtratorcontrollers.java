@@ -2,6 +2,8 @@ package com.lxz.controllers;
 
 import com.lxz.Factory.MyServiceFactory;
 import com.lxz.services.AdministratorService;
+import com.lxz.servicesimpl.AdministratorServiceimpl;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -14,7 +16,7 @@ import java.util.List;
 public class Adminidtratorcontrollers {
 
     // 用工厂模式减少直接new对象
-    private AdministratorService administratorService = (AdministratorService) MyServiceFactory
+    private AdministratorService administratorService = (AdministratorServiceimpl) MyServiceFactory
             .createService("Administrator");
 
     /**

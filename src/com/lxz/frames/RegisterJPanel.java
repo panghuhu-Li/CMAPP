@@ -260,7 +260,9 @@ public class RegisterJPanel extends JPanel{
                     factoryName.setBackground(Color.LIGHT_GRAY);
                 }else if(factoryType.equals("云工厂")) {
                     factoryDesc.setEditable(true);
+                    factoryDesc.setBackground(Color.WHITE);
                     factoryName.setEditable(true);
+                    factoryName.setBackground(Color.WHITE);
                 }
             }
         });
