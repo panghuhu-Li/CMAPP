@@ -249,21 +249,18 @@ public class RegisterJPanel extends JPanel{
         JComboBox<String> comboBox = new JComboBox<String>();
         comboBox.addItem("云工厂");
         comboBox.addItem("经销商");
-        comboBox.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                factoryType = comboBox.getSelectedItem().toString();
-                if (factoryType==null||factoryType.equals("经销商")||factoryType.equals("")) {
-                    factoryDesc.setEditable(false);
-                    factoryDesc.setBackground(Color.LIGHT_GRAY);
-                    factoryName.setEditable(false);
-                    factoryName.setBackground(Color.LIGHT_GRAY);
-                }else if(factoryType.equals("云工厂")) {
-                    factoryDesc.setEditable(true);
-                    factoryDesc.setBackground(Color.WHITE);
-                    factoryName.setEditable(true);
-                    factoryName.setBackground(Color.WHITE);
-                }
+        comboBox.addActionListener(e -> {
+            factoryType = comboBox.getSelectedItem().toString();
+            if (factoryType==null||factoryType.equals("经销商")||factoryType.equals("")) {
+                factoryDesc.setEditable(false);
+                factoryDesc.setBackground(Color.LIGHT_GRAY);
+                factoryName.setEditable(false);
+                factoryName.setBackground(Color.LIGHT_GRAY);
+            }else if(factoryType.equals("云工厂")) {
+                factoryDesc.setEditable(true);
+                factoryDesc.setBackground(Color.WHITE);
+                factoryName.setEditable(true);
+                factoryName.setBackground(Color.WHITE);
             }
         });
         comboBox.setBounds(148, 296, 205, 24);

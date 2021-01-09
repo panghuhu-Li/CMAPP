@@ -15,8 +15,8 @@ import java.util.List;
  * @create: 2020-07-18 15:42
  **/
 public class ProductServiceImpl implements ProductService {
-    private FileUtils fileUtils = new FileUtils();
-    private GsonUtils gsonUtils = new GsonUtils();
+    private final FileUtils fileUtils = new FileUtils();
+    private final GsonUtils gsonUtils = new GsonUtils();
 
     /**
      * @param object: 添加的产品对象

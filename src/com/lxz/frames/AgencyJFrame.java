@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JSeparator;
 
 /**
  * @program: CMAPP
@@ -26,7 +27,7 @@ public class AgencyJFrame extends JFrame {
      * 创建一个窗口
      */
     private AgencyJFrame() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 611, 457);
         setLocationRelativeTo(null);
         setResizable(false);
@@ -45,6 +46,16 @@ public class AgencyJFrame extends JFrame {
             
         });
         mnNewMenu.add(mntmNewMenuItem);
+        
+        JSeparator separator = new JSeparator();
+        mnNewMenu.add(separator);
+        
+        JMenuItem menuItem = new JMenuItem("投标信息查看");
+        menuItem.addActionListener(e -> {
+            AgencyJFrame agencyJFrame=AgencyJFrame.creatInstance();
+            agencyJFrame.changeJFrame("投标信息查看", new AgenceTenderInfoJPanel());
+        });
+        mnNewMenu.add(menuItem);
 
         changeContenePane(new AgencyJPanel());
     }

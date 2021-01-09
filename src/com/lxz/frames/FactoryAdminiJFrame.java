@@ -27,7 +27,7 @@ public class FactoryAdminiJFrame extends JFrame {
      * @param name:工厂负责人姓名
      */
     private FactoryAdminiJFrame(String name) {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 611, 457);
         setTitle("欢迎进入云工厂管理员界面");
         setLocationRelativeTo(null);
@@ -55,6 +55,15 @@ public class FactoryAdminiJFrame extends JFrame {
         menuBar.add(mnNewMenu_1);
 
         JMenuItem mntmNewMenuItem_1 = new JMenuItem("订单接单");
+        mntmNewMenuItem_1.addActionListener(arg0 -> {
+            FactoryAdminiJFrame factoryAdminiJFrame = FactoryAdminiJFrame.creatInstance(name);
+            factoryAdminiJFrame.setVisible(true);
+            factoryAdminiJFrame.setBounds(100, 100, 850, 620);
+            factoryAdminiJFrame.changeContenePane(new OrderTenderJPanel());
+            factoryAdminiJFrame.setLocationRelativeTo(null);
+            factoryAdminiJFrame.setResizable(false);
+
+        });
         mnNewMenu_1.add(mntmNewMenuItem_1);
 
         JSeparator separator = new JSeparator();
@@ -62,6 +71,21 @@ public class FactoryAdminiJFrame extends JFrame {
 
         JMenuItem mntmNewMenuItem_2 = new JMenuItem("订单排产");
         mnNewMenu_1.add(mntmNewMenuItem_2);
+        
+        JSeparator separator_1 = new JSeparator();
+        mnNewMenu_1.add(separator_1);
+        
+        JMenuItem menuItem = new JMenuItem("订单投标信息查看");
+        menuItem.addActionListener(arg0 -> {
+            FactoryAdminiJFrame factoryAdminiJFrame = FactoryAdminiJFrame.creatInstance(name);
+            factoryAdminiJFrame.setVisible(true);
+            factoryAdminiJFrame.setBounds(100, 100, 850, 620);
+            factoryAdminiJFrame.changeContenePane(new TenderInfoJPanel());
+            factoryAdminiJFrame.setLocationRelativeTo(null);
+            factoryAdminiJFrame.setResizable(false);
+
+        });
+        mnNewMenu_1.add(menuItem);
 
         changeContenePane(new FactoryAdminiJPanel());
 

@@ -30,4 +30,12 @@ public class OrderController {
     public Object search(String name) throws IOException {
         return orderService.search(name);
     }
+
+    public boolean delete(String orderNumber) throws IOException {
+        return orderService.delete(orderNumber);
+    }
+
+    public boolean modify(String iniCode, String iniName, String iniNumber, String iniDate, String iniDeadline, String iniPeople, String iniLinlWay, String iniPlace) throws IOException {
+        return orderService.modify(iniCode,iniName,iniNumber,iniDate,iniDeadline,iniPeople,iniLinlWay,iniPlace);
+    }
 }

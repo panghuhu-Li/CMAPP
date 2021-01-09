@@ -46,7 +46,7 @@ public class AddOrderJFrame extends JFrame {
         AddOrderJFrame addOrderJFrame = AddOrderJFrame.creatInstance();
         addOrderJFrame.setVisible(true);
         setTitle(titleString);
-        addOrderJFrame.setBounds(100, 100, 430, 560);
+        addOrderJFrame.setBounds(100, 100, 435, 659);
         addOrderJFrame.changeContenePane(jpanle);
         addOrderJFrame.setLocationRelativeTo(null);
         addOrderJFrame.setResizable(false);

@@ -17,8 +17,8 @@ import java.util.List;
  **/
 public class EquipmentServiceImpl implements EquipmentService {
 
-    private FileUtils fileUtils = new FileUtils();
-    private GsonUtils gsonUtils = new GsonUtils();
+    private final FileUtils fileUtils = new FileUtils();
+    private final GsonUtils gsonUtils = new GsonUtils();
 
     /**
      * @param object:云工厂创建的新对象
@@ -38,8 +38,7 @@ public class EquipmentServiceImpl implements EquipmentService {
      **/
     public List<Object> getList() throws IOException {
         String jsonString = fileUtils.readFile("EquipmentInfo");
-        List<Object> objects = gsonUtils.toObjectList(jsonString, EquipmentInfo.class);
-        return objects;
+        return gsonUtils.toObjectList(jsonString, EquipmentInfo.class);
     }
 
     /**
@@ -62,18 +61,10 @@ public class EquipmentServiceImpl implements EquipmentService {
                 continue;
             }
             String jsonString = gsonUtils.toJson(equipmentInfo);
-            if (flag == 0) {
-                fileUtils.saveData("EquipmentInfo", jsonString, false);
-            } else {
-                fileUtils.saveData("EquipmentInfo", jsonString, true);
-            }
+            fileUtils.saveData("EquipmentInfo", jsonString, flag != 0);
             flag++;
         }
-        if (num == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return num == 1;
     }
 
     /**
@@ -109,25 +100,16 @@ public class EquipmentServiceImpl implements EquipmentService {
             if (equipmentInfo.getEquipmentNumber().equals(name)) {
                 if (equipmentInfo.getEquipmentState().equals("已关闭")) {
                     equipmentInfo.setEquipmentState("闲置中");
-                    flag = 1;
                 } else {
                     equipmentInfo.setEquipmentState("已关闭");
-                    flag = 1;
                 }
+                flag = 1;
             }
             String jsonString = gsonUtils.toJson(equipmentInfo);
-            if (i == objects.size() - 1) {
-                fileUtils.saveData("EquipmentInfo", jsonString, false);
-            } else {
-                fileUtils.saveData("EquipmentInfo", jsonString, true);
-            }
+            fileUtils.saveData("EquipmentInfo", jsonString, i != objects.size() - 1);
         }
 
-        if (flag == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return flag == 1;
     }
 
     /**
@@ -161,18 +143,10 @@ public class EquipmentServiceImpl implements EquipmentService {
                 flag = 1;
             }
             String jsonString = gsonUtils.toJson(equipmentInfo);
-            if (i == objects.size() - 1) {
-                fileUtils.saveData("EquipmentInfo", jsonString, false);
-            } else {
-                fileUtils.saveData("EquipmentInfo", jsonString, true);
-            }
+            fileUtils.saveData("EquipmentInfo", jsonString, i != objects.size() - 1);
         }
 
-        if (flag == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return flag == 1;
     }
 
     /**
@@ -198,18 +172,10 @@ public class EquipmentServiceImpl implements EquipmentService {
             }
             String jsonString = gsonUtils.toJson(equipmentInfo);
             //判断是对文件覆盖还是续写，第一次文件添加为覆盖，后为续写
-            if (i == objects.size() - 1) {
-                fileUtils.saveData("EquipmentInfo", jsonString, false);
-            } else {
-                fileUtils.saveData("EquipmentInfo", jsonString, true);
-            }
+            fileUtils.saveData("EquipmentInfo", jsonString, i != objects.size() - 1);
         }
         //判断远程操作是否成功
-        if (flag == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return flag == 1;
     }
 
     /**
@@ -231,18 +197,10 @@ public class EquipmentServiceImpl implements EquipmentService {
                 flag = 1;
             }
             String jsonString = gsonUtils.toJson(equipmentInfo);
-            if (i == objects.size() - 1) {
-                fileUtils.saveData("EquipmentInfo", jsonString, false);
-            } else {
-                fileUtils.saveData("EquipmentInfo", jsonString, true);
-            }
+            fileUtils.saveData("EquipmentInfo", jsonString, i != objects.size() - 1);
         }
 
-        if (flag == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return flag == 1;
     }
 
     /**
@@ -264,8 +222,7 @@ public class EquipmentServiceImpl implements EquipmentService {
     @Override
     public List<Object> getTypeList() throws IOException {
         String jsonString = fileUtils.readFile("EquipmentType");
-        List<Object> objects = gsonUtils.toObjectList(jsonString, EquipmentType.class);
-        return objects;
+        return gsonUtils.toObjectList(jsonString, EquipmentType.class);
     }
 
     /**
@@ -285,18 +242,10 @@ public class EquipmentServiceImpl implements EquipmentService {
                 continue;
             }
             String jsonString = gsonUtils.toJson(equipmentType);
-            if (flag == 0) {
-                fileUtils.saveData("EquipmentType", jsonString, false);
-            } else {
-                fileUtils.saveData("EquipmentType", jsonString, true);
-            }
+            fileUtils.saveData("EquipmentType", jsonString, flag != 0);
             flag++;
         }
-        if (num == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return num == 1;
     }
 
     /**

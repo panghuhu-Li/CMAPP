@@ -45,6 +45,10 @@ public class MyServiceFactory {
             baseService = new OrderServiceImpl();
         }
 
+        if ("Tender".equals(message)) {
+            baseService = new TenderServiceImpl();
+        }
+
         return baseService;
     }
 }

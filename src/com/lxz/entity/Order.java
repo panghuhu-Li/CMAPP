@@ -16,8 +16,12 @@ public class Order {
     private String consignee;//收货人
     private String contactWay;//收货人联系方式
     private String placeOfReceive;//收货地点
+    private String orderState;//订单状态
+    private String orderType;//订单类型
 
-    public Order(String orderNumber, String productName, String orderAmount, String dayOfDeliver, String dayOfDecline, String consignee, String contactWay, String placeOfReceive) {
+
+    public Order(String orderNumber, String productName, String orderAmount, String dayOfDeliver, String dayOfDecline,
+                 String consignee, String contactWay, String placeOfReceive, String orderState, String orderType) {
         this.orderNumber = orderNumber;
         this.productName = productName;
         this.orderAmount = orderAmount;
@@ -26,6 +30,24 @@ public class Order {
         this.consignee = consignee;
         this.contactWay = contactWay;
         this.placeOfReceive = placeOfReceive;
+        this.orderState = orderState;
+        this.orderType = orderType;
+    }
+
+    public String getOrderType() {
+        return orderType;
+    }
+
+    public void setOrderType(String orderType) {
+        this.orderType = orderType;
+    }
+
+    public String getOrderState() {
+        return orderState;
+    }
+
+    public void setOrderState(String orderState) {
+        this.orderState = orderState;
     }
 
     public String getOrderNumber() {
