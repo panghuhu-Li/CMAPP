@@ -1,5 +1,7 @@
-{"orderNumber":"2021307132","orderName":"水晶葡萄","tenderPeo":"user3","tenderFactor":"user3","tenderDate":"2021-01-09","price":39,"tenderNumber":"28","tenderState":"工厂发货"}
-{"orderNumber":"2021290818","orderName":"水蜜桃订单","tenderPeo":"panghuhu","tenderFactor":"pangdun","tenderDate":"2021-01-09","price":80,"tenderNumber":"10000","tenderState":"竞标发布"}
+{"orderNumber":"2021307132","orderName":"水晶葡萄","tenderPeo":"user3","tenderFactor":"user3","tenderDate":"2021-01-09","price":39,"tenderNumber":"28","tenderState":"订单结束"}
+{"orderNumber":"2021290818","orderName":"水蜜桃订单","tenderPeo":"panghuhu","tenderFactor":"pangdun","tenderDate":"2021-01-09","price":80,"tenderNumber":"10000","tenderState":"中标确定"}
 {"orderNumber":"2021290818","orderName":"水蜜桃订单","tenderPeo":"yuangungun","tenderFactor":"yuandun","tenderDate":"2021-01-09","price":60,"tenderNumber":"20000","tenderState":"订单结束"}
 {"orderNumber":"202127915","orderName":"夏黑葡萄","tenderPeo":"小微","tenderFactor":"小微代工厂","tenderDate":"2021-01-09","price":2,"tenderNumber":"10000","tenderState":"竞标发布"}
 {"orderNumber":"202127915","orderName":"夏黑葡萄","tenderPeo":"小赵","tenderFactor":"小赵代工厂","tenderDate":"2021-01-09","price":9,"tenderNumber":"2000","tenderState":"中标确定"}
+{"orderNumber":"2021376479","orderName":"火腿肠","tenderPeo":"user2","tenderFactor":"user2","tenderDate":"2021-01-10","price":50,"tenderNumber":"50","tenderState":"竞标发布"}
+{"orderNumber":"2021376479","orderName":"火腿肠","tenderPeo":"user1","tenderFactor":"user1","tenderDate":"2021-01-10","price":50,"tenderNumber":"3000","tenderState":"中标确定"}

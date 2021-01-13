@@ -50,6 +50,21 @@ public class FactoryAdminiJFrame extends JFrame {
 
         });
         mnNewMenu.add(mntmNewMenuItem);
+        
+        JSeparator separator_2 = new JSeparator();
+        mnNewMenu.add(separator_2);
+        
+        JMenuItem menuItem_1 = new JMenuItem("工人管理");
+        menuItem_1.addActionListener(arg0 -> {
+            FactoryAdminiJFrame factoryAdminiJFrame = FactoryAdminiJFrame.creatInstance(name);
+            factoryAdminiJFrame.setVisible(true);
+            factoryAdminiJFrame.setBounds(100, 100, 850, 620);
+            factoryAdminiJFrame.changeContenePane(new WorkerJPanel());
+            factoryAdminiJFrame.setLocationRelativeTo(null);
+            factoryAdminiJFrame.setResizable(false);
+
+        });
+        mnNewMenu.add(menuItem_1);
 
         JMenu mnNewMenu_1 = new JMenu("订单管理");
         menuBar.add(mnNewMenu_1);

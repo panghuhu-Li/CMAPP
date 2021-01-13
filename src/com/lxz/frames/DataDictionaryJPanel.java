@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 import java.awt.Font;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
@@ -14,6 +15,7 @@ import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 
 import com.lxz.controllers.DictionaryDataController;
+import com.lxz.controllers.EquipmentController;
 import com.lxz.entity.Dictionary;
 import com.lxz.entity.EquipmentInfo;
 
@@ -29,6 +31,7 @@ public class DataDictionaryJPanel extends JPanel {
     private JTable table;
     private DefaultTableModel defaultTableModel = new DefaultTableModel();
     private DictionaryDataController dictionaryDataController = new DictionaryDataController();
+    private EquipmentController equipmentController = new EquipmentController();
 
     /**
      * Create the panel.
@@ -80,9 +83,12 @@ public class DataDictionaryJPanel extends JPanel {
 
                 if (dictionaryName.getText().equals("设备状态") || dictionaryType.getText().equals("equiomentState")) {
                     superJFrame.changeJFrame("设备状态", new EquipmentJPanel());
+                } else if (dictionaryName.getText().equals("设备类型") || dictionaryType.getText().equals("equiomentType")) {
+                    superJFrame.changeJFrame("设备状态", new EquipmentTypeJPanel());
                 } else {
                     JOptionPane.showMessageDialog(null, "没有该数据字典类型");
                 }
+
 
             }
         });
@@ -93,10 +99,16 @@ public class DataDictionaryJPanel extends JPanel {
         JButton button_1 = new JButton("添加");
         button_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
+                List<Object> objects = new ArrayList<Object>();
+                try {
+                    objects = equipmentController.getEquipmentType();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 String name = dictionaryName.getText();
                 String typeCode = dictionaryType.getText();
-                String dictionaryNumber = "2021" + (int)(Math.random()*10000);
-                Dictionary dictionary=new Dictionary(dictionaryNumber,typeCode,name,1);
+                String dictionaryNumber = "2021" + (int) (Math.random() * 10000);
+                Dictionary dictionary = new Dictionary(dictionaryNumber, typeCode, name, objects.size());
 
                 try {
                     dictionaryDataController.add(dictionary);
@@ -122,7 +134,7 @@ public class DataDictionaryJPanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 int num = table.getSelectedRow();
                 System.out.println(num);
-                System.out.println("1  "+defaultTableModel.getValueAt(num, 2).toString());
+                System.out.println("1  " + defaultTableModel.getValueAt(num, 2).toString());
                 try {
                     dictionaryDataController.delete(defaultTableModel.getValueAt(num, 1).toString());
                     //清空原表格中的信息

@@ -30,8 +30,7 @@ public class DictionaryDataServiceImpl implements DictionaryDataService {
     @Override
     public List<Object> getList() throws IOException {
         String jsonString = fileUtils.readFile("Dictionary");
-        List<Object> objects = gsonUtils.toObjectList(jsonString, Dictionary.class);
-        return objects;
+        return gsonUtils.toObjectList(jsonString, Dictionary.class);
     }
 
     @Override

@@ -5,3 +5,5 @@
 {"factoryNameString":"无人机制造","factoryDescString":"生产各种类型的无人机","principal":"王明辉","linkman":"王明辉","linkway":"17898096756","accountNumber":"2222","status":false}
 {"factoryNameString":"豆豆玩具","factoryDescString":"生产各种针织玩具","principal":"豆豆","linkman":"豆豆","linkway":"15567977836","accountNumber":"0000","status":false}
 {"factoryNameString":"阿里","factoryDescString":"无","principal":"用户1","linkman":"用户1","linkway":"155","accountNumber":"user1","status":false}
+{"factoryNameString":"胖嘟嘟","factoryDescString":"无","principal":"用户2","linkman":"用户2","linkway":"256","accountNumber":"user2","status":false}
+{"factoryNameString":"sad","factoryDescString":"wu","principal":"pangdudu","linkman":"pangdudu","linkway":"110","accountNumber":"user3","status":true}

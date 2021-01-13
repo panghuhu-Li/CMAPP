@@ -1,17 +1,15 @@
 package com.lxz.servicesimpl;
-
+import com.lxz.entity.Dictionary;
 import com.lxz.entity.EquipmentInfo;
 import com.lxz.entity.EquipmentType;
 import com.lxz.services.EquipmentService;
 import com.lxz.utils.FileUtils;
 import com.lxz.utils.GsonUtils;
-
 import java.io.IOException;
 import java.util.List;
-
 /**
  * @program: CMAPP
- * @description  设备数据处理层
+ * @description 设备数据处理层
  * @author: 李星泽
  * @create: 2020-07-19 09:49
  **/
@@ -19,7 +17,6 @@ public class EquipmentServiceImpl implements EquipmentService {
 
     private final FileUtils fileUtils = new FileUtils();
     private final GsonUtils gsonUtils = new GsonUtils();
-
     /**
      * @param object:云工厂创建的新对象
      * @return boolean:返回是否成功添加
@@ -212,6 +209,22 @@ public class EquipmentServiceImpl implements EquipmentService {
     public boolean addType(Object object) throws IOException {
         String jsonString = gsonUtils.toJson(object);
         fileUtils.saveData("EquipmentType", jsonString, true);
+        List<Object> objectsDic = getListDic();
+        int count = 0;
+        for (int i = objectsDic.size() - 1; i >= 0; i--) {
+            Dictionary dictionary = (Dictionary) objectsDic.get(i);
+            if (dictionary.getName().equals("设备类型")) {
+                dictionary.setNumber(dictionary.getNumber() + 1);
+            }
+            String jsonStringDic = gsonUtils.toJson(dictionary);
+            if (count == 0) {
+                fileUtils.saveData("Dictionary", jsonStringDic, false);
+                count++;
+            } else {
+                fileUtils.saveData("Dictionary", jsonStringDic, true);
+            }
+        }
+
         return true;
     }
 
@@ -223,6 +236,7 @@ public class EquipmentServiceImpl implements EquipmentService {
     public List<Object> getTypeList() throws IOException {
         String jsonString = fileUtils.readFile("EquipmentType");
         return gsonUtils.toObjectList(jsonString, EquipmentType.class);
+
     }
 
     /**
@@ -244,6 +258,21 @@ public class EquipmentServiceImpl implements EquipmentService {
             String jsonString = gsonUtils.toJson(equipmentType);
             fileUtils.saveData("EquipmentType", jsonString, flag != 0);
             flag++;
+        }
+        List<Object> objectsDic = getListDic();
+        int count = 0;
+        for (int i = objectsDic.size() - 1; i >= 0; i--) {
+            Dictionary dictionary = (Dictionary) objectsDic.get(i);
+            if (dictionary.getName().equals("设备类型")) {
+                dictionary.setNumber(dictionary.getNumber() - 1);
+            }
+            String jsonStringDic = gsonUtils.toJson(dictionary);
+            if (count == 0) {
+                fileUtils.saveData("Dictionary", jsonStringDic, false);
+                count++;
+            } else {
+                fileUtils.saveData("Dictionary", jsonStringDic, true);
+            }
         }
         return num == 1;
     }
@@ -302,18 +331,15 @@ public class EquipmentServiceImpl implements EquipmentService {
                 flag = 1;
             }
             String jsonString = gsonUtils.toJson(equipmentInfo);
-            if (i == objects.size() - 1) {
-                fileUtils.saveData("EquipmentInfo", jsonString, false);
-            } else {
-                fileUtils.saveData("EquipmentInfo", jsonString, true);
-            }
+            fileUtils.saveData("EquipmentInfo", jsonString, i != objects.size() - 1);
         }
 
         //判断操作是否成功
-        if (flag == 1 || num == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return flag == 1 || num == 1;
+    }
+
+    public List<Object> getListDic() throws IOException {
+        String jsonString = fileUtils.readFile("Dictionary");
+        return gsonUtils.toObjectList(jsonString, Dictionary.class);
     }
 }

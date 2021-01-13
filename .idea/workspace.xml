@@ -1,150 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74e093a5-feb5-421f-a1b4-dfbaf325f7cf" name="Default Changelist" comment="数据结构课设1.95版本">
-      <change afterPath="$PROJECT_DIR$/Data/Order" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/Tender" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allclasses-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allclasses-noframe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/Factory/MyServiceFactory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/Factory/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/Factory/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/Factory/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/controllers/Adminidtratorcontrollers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/controllers/CloudController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/controllers/DictionaryDataController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/controllers/EquipmentController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/controllers/OrderController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/controllers/ProductController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/controllers/TenderController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/controllers/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/controllers/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/controllers/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/Administrator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/Agency.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/CloudAdministrator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/CloudFactory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/Dictionary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/EquipmentInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/EquipmentType.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/Order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/OrderManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/ProductInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/ProductType.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/SuperAdministrator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/Tender.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/entity/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/AddOrderJFrame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/AddOrderJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/AgenceTenderInfoJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/AgencyJFrame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/CapacityJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/DataDictionaryJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/EquipmentJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/EquipmentTypeJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/FactoryAdminiJFrame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/FactoryJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/LoginJFrame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/LoginJPane.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/MyEquipmentJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/OrderJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/OrderModifyJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/OrderTenderJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/ProductInfoJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/ProductTypeJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/RegisterJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/RentJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/SuperJFrame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/TenderInfoJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/TenderJFrame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/TenderJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/UserManaJPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/frames/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/services/AdministratorService.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/services/BaseServices.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/services/CloudInterface.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/services/DictionaryDataService.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/services/EquipmentService.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/services/OrderService.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/services/ProductService.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/services/TenderService.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/services/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/services/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/services/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/servicesimpl/AdministratorServiceimpl.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/servicesimpl/CloudInterfaceImpl.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/servicesimpl/DictionaryDataServiceImpl.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/servicesimpl/EquipmentServiceImpl.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/servicesimpl/OrderServiceImpl.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/servicesimpl/ProductServiceImpl.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/servicesimpl/TenderServiceImpl.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/servicesimpl/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/servicesimpl/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/servicesimpl/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/utils/FileUtils.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/utils/GsonUtils.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/utils/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/utils/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/lxz/utils/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constant-values.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deprecated-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help-doc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-13.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-15.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-16.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-17.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index-files/index-9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/overview-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/overview-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/overview-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-list" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serialized-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lxz/controllers/TenderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lxz/entity/Tender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lxz/frames/AgenceTenderInfoJPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lxz/frames/OrderModifyJPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lxz/frames/OrderTenderJPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lxz/frames/TenderInfoJPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lxz/frames/TenderJFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lxz/frames/TenderJPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lxz/services/TenderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lxz/servicesimpl/TenderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
+    <list default="true" id="74e093a5-feb5-421f-a1b4-dfbaf325f7cf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/lxz/frames/WorkerJPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/CloudFactory" beforeDir="false" afterPath="$PROJECT_DIR$/Data/CloudFactory" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Dictionary" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Dictionary" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/EquipmentInfo" beforeDir="false" afterPath="$PROJECT_DIR$/Data/EquipmentInfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/Factory/MyServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/Factory/MyServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/controllers/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/AddOrderJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/AddOrderJFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/AddOrderJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/AddOrderJPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/AgencyJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/AgencyJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/EquipmentType" beforeDir="false" afterPath="$PROJECT_DIR$/Data/EquipmentType" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Order" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Order" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/ProductType" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ProductType" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Tender" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tender" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/User" beforeDir="false" afterPath="$PROJECT_DIR$/Data/User" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/DataDictionaryJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/DataDictionaryJPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/FactoryAdminiJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/FactoryAdminiJFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/OrderJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/OrderJPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/RegisterJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/RegisterJPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lxz/servicesimpl/DictionaryDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/servicesimpl/DictionaryDataServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/lxz/servicesimpl/EquipmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/servicesimpl/EquipmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/servicesimpl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/servicesimpl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/servicesimpl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/servicesimpl/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,8 +62,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../桌面/HospitalWeb/.project" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../QQwenjian/CloudSystem(4)/.project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
@@ -331,7 +203,24 @@
       <workItem from="1610170538132" duration="1033000" />
       <workItem from="1610171678751" duration="2349000" />
       <workItem from="1610174150511" duration="432000" />
-      <workItem from="1610174617832" duration="341000" />
+      <workItem from="1610174617832" duration="585000" />
+      <workItem from="1610175901397" duration="99000" />
+      <workItem from="1610176336713" duration="2000" />
+      <workItem from="1610179963730" duration="469000" />
+      <workItem from="1610248142462" duration="1697000" />
+      <workItem from="1610253199609" duration="3516000" />
+      <workItem from="1610263743766" duration="28000" />
+      <workItem from="1610347076849" duration="116000" />
+      <workItem from="1610347322484" duration="37000" />
+      <workItem from="1610370951235" duration="5000" />
+      <workItem from="1610373331516" duration="19000" />
+      <workItem from="1610418839914" duration="27000" />
+      <workItem from="1610419034387" duration="63000" />
+      <workItem from="1610435115846" duration="15000" />
+      <workItem from="1610435188401" duration="1000" />
+      <workItem from="1610502251309" duration="94000" />
+      <workItem from="1610505211365" duration="16000" />
+      <workItem from="1610505277736" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="数据结构课设中期版本">
       <created>1610025167907</created>
@@ -347,11 +236,55 @@
       <option name="project" value="LOCAL" />
       <updated>1610174952659</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="数据结构课设1.95版本">
+      <created>1610174992127</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610174992127</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="数据结构课设中期版本" />
