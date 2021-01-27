@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74e093a5-feb5-421f-a1b4-dfbaf325f7cf" name="Default Changelist" comment="数据结构课设1.95版本">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/CloudFactory" beforeDir="false" afterPath="$PROJECT_DIR$/Data/CloudFactory" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Dictionary" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Dictionary" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Order" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Order" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ProductType" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ProductType" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Tender" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tender" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/User" beforeDir="false" afterPath="$PROJECT_DIR$/Data/User" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/Factory/MyServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/Factory/MyServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/controllers/CloudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/controllers/CloudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/controllers/DictionaryDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/controllers/DictionaryDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/controllers/EquipmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/controllers/EquipmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/controllers/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/controllers/TenderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/controllers/TenderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/AddOrderJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/AddOrderJFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/AddOrderJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/AddOrderJPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/AgenceTenderInfoJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/AgenceTenderInfoJPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/frames/LoginJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/frames/LoginJFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/services/TenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/services/TenderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lxz/servicesimpl/TenderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lxz/servicesimpl/TenderServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="74e093a5-feb5-421f-a1b4-dfbaf325f7cf" name="Default Changelist" comment="数据结构课设1.95版本" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,6 +212,7 @@
       <workItem from="1611056586921" duration="17000" />
       <workItem from="1611057113375" duration="20000" />
       <workItem from="1611058128090" duration="24000" />
+      <workItem from="1611754386371" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="数据结构课设中期版本">
       <created>1610025167907</created>
@@ -256,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610174992127</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="数据结构课设1.95版本">
+      <created>1611754407333</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611754407333</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
