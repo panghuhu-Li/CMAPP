@@ -41,10 +41,12 @@ public class MyServiceFactory {
             baseService = new DictionaryDataServiceImpl();
         }
 
+        //Order
         if ("Order".equals(message)) {
             baseService = new OrderServiceImpl();
         }
 
+        //tender
         if ("Tender".equals(message)) {
             baseService = new TenderServiceImpl();
         }

@@ -16,7 +16,7 @@ import java.util.List;
 public class ProductController {
 
     // 用工厂模式减少直接new对象
-    private ProductService productService = (ProductServiceImpl) MyServiceFactory.createService("Product");
+    private final ProductService productService = (ProductServiceImpl) MyServiceFactory.createService("Product");
 
     /**
      * @param object: 添加的产品对象

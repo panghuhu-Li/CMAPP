@@ -16,7 +16,7 @@ import java.util.List;
  **/
 public class OrderController {
     // 用工厂模式减少直接new对象
-    private OrderService orderService = (OrderServiceImpl) MyServiceFactory
+    private final OrderService orderService = (OrderServiceImpl) MyServiceFactory
             .createService("Order");
 
     public boolean add(Object object) throws IOException {

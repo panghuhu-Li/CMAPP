@@ -17,7 +17,7 @@ public class CloudController {
 
     // 用工厂模式减少直接new对象
 
-    private CloudInterface cloudInterface = (CloudInterfaceImpl) MyServiceFactory.createService("Cloud");
+    private final CloudInterface cloudInterface = (CloudInterfaceImpl) MyServiceFactory.createService("Cloud");
 
     /**
      * @param object:云工厂创建的新对象

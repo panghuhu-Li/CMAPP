@@ -11,9 +11,14 @@ import javax.swing.border.EmptyBorder;
 public class AddOrderJFrame extends JFrame {
 
     private JPanel contentPane;
-  //单例模式
+    //单例模式
     private static AddOrderJFrame instanceFrame = null;
-    
+
+    /**
+     *
+     * @return void
+     * @description single module to creat object in order to maintain the only object
+     */
     public static AddOrderJFrame creatInstance() {
         if (instanceFrame == null) {
             instanceFrame = new AddOrderJFrame();
@@ -23,7 +28,6 @@ public class AddOrderJFrame extends JFrame {
         }
     }
 
-    
 
     /**
      * Create the frame.
@@ -34,14 +38,14 @@ public class AddOrderJFrame extends JFrame {
         setResizable(true);
         changeContenePane(new AddOrderJPanel());
     }
-    
+
     public void changeContenePane(Container contentPane) {
         setContentPane(contentPane);
         // 重新启动
         this.revalidate();
     }
-    
-  // 改变面板
+
+    // 改变面板
     public void changeJFrame(String titleString, JPanel jpanle) {
         AddOrderJFrame addOrderJFrame = AddOrderJFrame.creatInstance();
         addOrderJFrame.setVisible(true);

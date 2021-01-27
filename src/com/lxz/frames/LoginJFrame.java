@@ -1,6 +1,9 @@
 package com.lxz.frames;
 
+import com.lxz.servicesimpl.TenderServiceImpl;
+
 import java.awt.Container;
+import java.io.IOException;
 import javax.swing.JFrame;
 /**
  * @program: CMAPP
@@ -16,7 +19,9 @@ public class LoginJFrame extends JFrame {
     /**
      * 程序开始运行
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+//        TenderServiceImpl tenderService=new TenderServiceImpl();
+//        tenderService.sort();
         LoginJFrame loginJFrame=LoginJFrame.creatInstance();
         loginJFrame.setVisible(true);
         loginJFrame.setTitle("欢迎进入登录注册窗口");

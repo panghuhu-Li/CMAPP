@@ -14,7 +14,7 @@ import java.util.List;
  * @create: 2021-01-05 21:03
  **/
 public class DictionaryDataController {
-    private DictionaryDataService dictionaryDataService = (DictionaryDataServiceImpl) MyServiceFactory.createService("DictionaryData");
+    private final DictionaryDataService dictionaryDataService = (DictionaryDataServiceImpl) MyServiceFactory.createService("DictionaryData");
 
     public List<Object> getDictionaryData() throws IOException {
         return dictionaryDataService.getList();

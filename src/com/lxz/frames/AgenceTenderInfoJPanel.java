@@ -132,16 +132,16 @@ public class AgenceTenderInfoJPanel extends JPanel {
      */
     public void showMessage(int number) throws IOException {
 
-        List<Object> objects = tenderController.getList();
+        List<Tender> objects = tenderController.sortList();
         int count=1;
         if (number==1) {
             for (int i = 0; i < objects.size(); i++) {
-                addTableRow((Tender) objects.get(i), i + 1);
+                addTableRow(objects.get(i), i + 1);
             }
         }else {
             for (int i = 0; i < objects.size(); i++) {
                  
-                Tender tender=(Tender) objects.get(i);
+                Tender tender=objects.get(i);
                 if (tender.getTenderState().equals("中标确定")) {
                     addTableRow(tender, count++);
                 }

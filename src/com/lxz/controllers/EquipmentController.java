@@ -16,7 +16,7 @@ import java.util.List;
 public class EquipmentController {
 
     // 用工厂模式减少直接new对象
-    private EquipmentService equipmentService = (EquipmentServiceImpl) MyServiceFactory.createService("Equipment");
+    private final EquipmentService equipmentService = (EquipmentServiceImpl) MyServiceFactory.createService("Equipment");
 
     /**
      * @param object:云工厂创建的新对象

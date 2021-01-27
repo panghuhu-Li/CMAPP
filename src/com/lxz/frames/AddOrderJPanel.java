@@ -109,8 +109,8 @@ public class AddOrderJPanel extends JPanel {
         if (objects == null || objects.size() == 0) {
             comboBoxOfProductType.addItem("《---请选择---》");
         } else {
-            for (int i = 0; i < objects.size(); i++) {
-                ProductType productType = (ProductType) objects.get(i);
+            for (Object object : objects) {
+                ProductType productType = (ProductType) object;
                 comboBoxOfProductType.addItem(productType.getTypeName());
             }
         }
